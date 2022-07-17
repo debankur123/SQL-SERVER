@@ -1,0 +1,8 @@
+SELECT * FROM 
+(SELECT
+	SalesOrderID,
+	SalesOrderDetailID,
+	LineTotal,
+	LINETOTALRANKING = ROW_NUMBER() OVER(PARTITION BY SalesOrderID ORDER BY LineTotal DESC)
+FROM Sales.SalesOrderDetail) A
+WHERE LINETOTALRANKING=1
