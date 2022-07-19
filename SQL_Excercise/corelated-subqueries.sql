@@ -27,7 +27,6 @@ from Sales.SalesOrderHeader A
 
 
 --------------------------------------------------------------------
-
 select 
     salesOrderId,
     OrderQty
