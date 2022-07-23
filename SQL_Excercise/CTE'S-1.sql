@@ -68,4 +68,11 @@ Top10 as (
 	group by OrderMonth
 )
 
-select * from Top10
+Select 
+    A.OrderMonth,
+    A.Top10Total,
+    PrevTop10Total = B.Top10Total
+from Top10 A
+left join Top10 B 
+on A.OrderMonth = DATEADD(MONTH,1,B.OrderMonth)
+order by OrderMonth
