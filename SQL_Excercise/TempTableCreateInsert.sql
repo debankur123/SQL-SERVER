@@ -16,7 +16,7 @@ CREATE table #Sales2(
     OrderRank  Int
 )
 
-insert into #Sales2 (
+insert into #Sales2(
     OrderDate ,
     OrderMonth ,
     TotalDue ,
@@ -53,7 +53,9 @@ Select
 from #Top10Sales A
 left join #Top10Sales B 
 on A.OrderMonth = DATEADD(MONTH,1,B.OrderMonth)
-order by OrderMonth    
+order by OrderMonth   
+
+--select * from #Sales2 WHERE OrderRank<=5
 
 
 
