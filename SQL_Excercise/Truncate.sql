@@ -1,4 +1,5 @@
-create table #NewOrders(
+create table #NewOrders
+(
     OrderDate DATE,
     OrderMonth DATE,
     TotalDue   Money,
@@ -21,7 +22,8 @@ from Sales.SalesOrderHeader
 
 SELECT * FROM #NewOrders
 
-create table #Top10Orders(
+create table #Top10Orders
+(
     OrderMonth DATE,
 	OrderType varchar(50),
     Top10Total money
@@ -34,6 +36,5 @@ select
 from #NewOrders
 where OrderRank <=10
 group by OrderMonth
-
 
  select * from #Top10Orders
