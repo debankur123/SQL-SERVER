@@ -4,7 +4,7 @@
 	3. This allows us to consolidate complex logic into a variable and refer to the variable as many times as we need without repeating the logic.
 
 	a. We have a query where we intend to pull all products above a certain minimum price
-    b. We have another which reuires to show the products whose ListPrice is greater than the average price
+    b. We have another query  which requires to show the products whose ListPrice is greater than the average price
 
 */
 
