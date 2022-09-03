@@ -19,8 +19,6 @@ select stuff(
         for XML Path('')
     ),1,1,''
 ) 
-
-
 /*
     Now for a real world example we will do this with the
     linetotal column.
